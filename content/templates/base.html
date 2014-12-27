@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block title_text %}{% endblock %}</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link href = "/static/css/bootstrap.min.css" rel = "stylesheet">
+		<link href = "/static/css/styles.css" rel = "stylesheet">
+
+	</head>
+
+	<body>
+
+		<div class = "navbar navbar-inverse navbar-fixed-top">
+			<div class = "container">
+				 <a href = "/" class = "navbar-brand">Juan Emeterio</a>
+
+				 <button class = "navbar-toggle" data-toggle = "collapse" data-target = ".navHeaderCollapse">
+				 	<span class = "icon-bar"></span>
+				 	<span class = "icon-bar"></span>
+				 	<span class = "icon-bar"></span>
+				 </button>
+
+				 <div class= "collapse navbar-collapse navHeaderCollapse">
+				 	<ul class = "nav navbar-nav navbar-right">
+				 		<li id = "home_link"><a href = "/" >Home</a></li>
+				 		<li id = "blog_link"><a href = "/content/blog" >Blog</a></li>
+				 		<li id = "projects_link"><a href = "/content/projects" >Projects</a></li>
+				 		<li id = "about_link"><a href = "/content/about" >About</a></li>
+				 		<li><a href = "#contact" data-toggle = "modal">Contact</a></li>
+
+
+				 	</ul>
+
+				 </div>
+			</div>
+		</div>
+		{% block content %}
+		{% endblock %}
+
+
+		<div class = "modal fade" id = "contact" role = "dialog">
+			<div class = "modal-dialog">
+				<div class = "modal-content">
+					<form class = "form-horizontal">
+						<div class = "modal-header">
+							<h4>Contact Juan Emeterio</h4>
+						</div> 
+						<div class = "modal-body">
+							<div class = "form-group">
+								<label for = "contact-name" class = "col-lg-2 control-label">Name</label>
+								<div class = "col-lg-10">
+									<input type = "text" class = "form-control" id = "contact-name" placeholder = "Full Name">
+									
+								</div>
+
+							</div>
+							<div class = "form-group">
+								<label for = "contact-email" class = "col-lg-2 control-label">Email</label>
+								<div class = "col-lg-10">
+									<input type = "email" class = "form-control" id = "contact-email" placeholder = "you@example.com">
+									
+								</div>
+
+							</div>
+							<div class = "form-group">
+								<label for = "contact-message" class = "col-lg-2 control-label">Message</label>
+								<div class = "col-lg-10">
+									<textarea class = "form-control" rows = "8"></textarea>
+									
+								</div>
+
+							</div>
+
+
+						</div>
+						<div class = "modal-footer">
+							<a class = "btn btn-default" data-dismiss = "modal">Close</a>
+							<button class = "btn  btn-primary" type = "submit">Send</button>
+						</div>
+				</div>
+			</div>
+		</div>
+
+		<script src = "http://code.jquery.com/jquery-1.11.2.min.js"></script>
+		<script src = "/static/js/bootstrap.js"></script>
+		<script>
+			document.getElementById("{% block active_link %}{% endblock %}").className = "active";
+		</script>
+	</body>
+
+
+
+
+
+</html>
