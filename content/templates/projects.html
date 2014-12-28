@@ -1,52 +1,26 @@
 {% extends 'base.html' %}
 {% block title_text %}Juan Emeterio | Projects{% endblock %}
 {%block content%}
+	{%for projects_post in projects_posts%}
 		<div class = container>
 			<div class = "row">
-				<div class = "col-lg-9">
+				<div class = "col-lg-10 col-lg-offset-1">
 					<div class = "panel panel-default">
-						<div class = "panel-body">
-							<div class = "page-header">
-								<h3>The best website on earth!</h3>
-								<h6>December 27th, 2014</h6>
-							</div>
-							<img class = "featuredImg" src = "/static/img/star.JPG" width = "100%" >
-							<p>
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis ligula non ligula tincidunt vulputate. Mauris rhoncus mollis nibh, eget congue nibh posuere vel. Aliquam aliquam consectetur magna nec rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis ligula non ligula tincidunt vulputate. Mauris rhoncus mollis nibh, eget congue nibh posuere vel. Aliquam aliquam consectetur magna nec rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis ligula non ligula tincidunt vulputate. Mauris rhoncus mollis nibh, eget congue nibh posuere vel. Aliquam aliquam consectetur magna nec rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis ligula non ligula tincidunt vulputate. Mauris rhoncus mollis nibh, eget congue nibh posuere vel. Aliquam aliquam consectetur magna nec rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-							</p>
+						
+						<div class = "panel-heading">
+							<h3>{{projects_post.title}}</h3>
+							<h6>{{projects_post.date}}</h6>
 						</div>
-					</div>
-				</div>
-				<div class = "col-lg-3">
-					<div class = "list-group">
-						<a href = "#" class = "list-group-item">
-							<h4 class = "list-group-item-heading">Lorem Ipsum</h4>
-							<p class = "list-group-item-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis ligula non ligula tincidunt vulputate. Mauris rhoncus mollis nibh, eget congue nibh posuere vel. Aliquam aliquam consectetur magna nec rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-							</p>
-						</a>
-						<a href = "#" class = "list-group-item">
-							<h4 class = "list-group-item-heading">Lorem Ipsum</h4>
-							<p class = "list-group-item-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis ligula non ligula tincidunt vulputate. Mauris rhoncus mollis nibh, eget congue nibh posuere vel. Aliquam aliquam consectetur magna nec rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-							</p>
-						</a>
-						<a href = "#" class = "list-group-item">
-							<h4 class = "list-group-item-heading">Lorem Ipsum</h4>
-							<p class = "list-group-item-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis ligula non ligula tincidunt vulputate. Mauris rhoncus mollis nibh, eget congue nibh posuere vel. Aliquam aliquam consectetur magna nec rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-							</p>
-						</a>
-						<a href = "#" class = "list-group-item">
-							<h4 class = "list-group-item-heading">Lorem Ipsum</h4>
-							<p class = "list-group-item-text">
-							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent quis ligula non ligula tincidunt vulputate. Mauris rhoncus mollis nibh, eget congue nibh posuere vel. Aliquam aliquam consectetur magna nec rutrum. Interdum et malesuada fames ac ante ipsum primis in faucibus.
-							</p>
-						</a>
+
+						<div class = "panel-body">
+							<img class = "featuredImg img-responsive center-block"  src = "{{projects_post.img}}" width = "100%" >
+							<p>{{projects_post.content}}</p>
+						</div>
 					</div>
 				</div>
 			</div>
 		</div>
+	{% endfor %}
 {% endblock %}
 
 {% block active_link %}projects_link{% endblock %}

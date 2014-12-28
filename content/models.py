@@ -12,8 +12,7 @@ class Publication(models.Model):
 	type = models.ForeignKey(PubType, default=None)
 	date = models.DateTimeField(auto_now_add=True)
 	title = models.CharField(max_length=200)
-	short_content = models.CharField(max_length=300)
-	long_content = models.TextField(default='')
+	content = models.TextField(default='')
 	img = models.CharField(max_length=200)
 
 	def __str__(self):
