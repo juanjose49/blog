@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{%block content%}
+	{%for content_post in content_posts%}
+		<div class = container>
+			<div class = "row">
+				<div class = "col-lg-10 col-lg-offset-1">
+					<div class = "panel panel-default">
+						
+						<div class = "panel-heading">
+							<h3>{{content_post.title}}</h3>
+							<h6>{{content_post.date}}</h6>
+						</div>
+
+						<div class = "panel-body">
+							<img class = "featuredImg img-responsive center-block"  src = "/static/{{content_post.img.url}}" width = "100%" >
+							<p>{{content_post.content}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	{% endfor %}
+{% endblock %}
+

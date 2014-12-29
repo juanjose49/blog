@@ -1,9 +1,10 @@
 body {
-	padding-top: 65px;
-	padding-bottom: 65px;
+	padding-top: 80px;
+	padding-bottom: 0px;
 }
 .page-header {
 	margin-top: 0;
+
 }
 
 .panel-body {
@@ -18,6 +19,15 @@ body {
 
 p{
 	font-size: 16px;
+}
+
+.navbar {
+    margin-bottom: 0px;
+    border-radius: 0px;
+}
+
+.navbar-static-bottom{
+	margin-top: 0px;
 }
 
 

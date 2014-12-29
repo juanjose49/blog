@@ -1,26 +1,3 @@
-{% extends 'base.html' %}
+{% extends 'content_base.html' %}
 {% block title_text %}Juan Emeterio | Blog{% endblock %}
-{%block content%}
-	{%for blog_post in blog_posts%}
-		<div class = container>
-			<div class = "row">
-				<div class = "col-lg-10 col-lg-offset-1">
-					<div class = "panel panel-default">
-						
-						<div class = "panel-heading">
-							<h3>{{blog_post.title}}</h3>
-							<h6>{{blog_post.date}}</h6>
-						</div>
-
-						<div class = "panel-body">
-							<img class = "featuredImg img-responsive center-block"  src = "{{blog_post.img}}" width = "100%" >
-							<p>{{blog_post.content}}</p>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	{% endfor %}
-{% endblock %}
-
 {% block active_link %}blog_link{% endblock %}
