@@ -10,7 +10,7 @@ class PubType(models.Model):
 
 class Publication(models.Model):
 	type = models.ForeignKey(PubType, default=None)
-	date = models.DateTimeField(auto_now_add=True)
+	date = models.DateTimeField()
 	title = models.CharField(max_length=200)
 	content = models.TextField(default='')
 	img = models.ImageField(upload_to='img/')
