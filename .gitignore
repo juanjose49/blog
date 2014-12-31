@@ -1,5 +1,10 @@
-db.sqlite3
-blog/__pycache__/
-content/migrations/__pycache__/
 content/static/img/
+blog/__pycache__/
 content/__pycache__/
+content/migrations/__pycache__/0005_auto_20141228_1611.cpython-34.pyc
+content/migrations/__pycache__/0006_publication_image.cpython-34.pyc
+content/migrations/__pycache__/0007_auto_20141228_2134.cpython-34.pyc
+content/migrations/__pycache__/0008_auto_20141229_0919.cpython-34.pyc
+content/migrations/__pycache__/0009_auto_20141229_0947.cpython-34.pyc
+content/migrations/__pycache__/0010_staticcontent_img.cpython-34.pyc
+

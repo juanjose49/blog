@@ -34,3 +34,7 @@ p{
 	width: 100px;
 }
 
+u {
+    text-decoration: none;
+    border-bottom: 2px solid black;
+  }

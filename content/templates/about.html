@@ -6,7 +6,7 @@
 			<div class = "jumbotron text-center">
 				<img class = "img-circle img-responsive center-block" src = "{{static_content.img.url}}" width = "30%" >
 				<h1>{{static_content.title}}</h1>
-				<p>{{static_content.content | linebreaks}}</p>
+				<p>{{static_content.content |safe}}</p>
 				<a class="btn btn-large btn-primary custom-width" href = "http://www.linkedin.com/in/juanjsanemeterio">LinkedIn</a>
 				<a class="btn btn-large btn-success custom-width" href = "http://www.github.com/juanjose49">GitHub</a>
 			</div>
