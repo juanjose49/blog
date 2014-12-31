@@ -13,7 +13,7 @@
 
 						<div class = "panel-body">
 							<img class = "featuredImg img-responsive center-block"  src = "{{content_post.img.url}}" width = "100%" >
-							<p>{{content_post.content | linebreaks}}</p>
+							{{content_post.content | safe}}
 						</div>
 					</div>
 				</div>
