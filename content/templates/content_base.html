@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {%block content%}
 	{%for content_post in content_posts%}
-		<div class = container>
+		<div id = "{{content_post.id}}" style="padding-top:55px; margin-top:-55px;" class = container>
 			<div class = "row">
 				<div class = "col-lg-10 col-lg-offset-1">
 					<div class = "panel panel-default">
