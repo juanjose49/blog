@@ -38,3 +38,13 @@ u {
     text-decoration: none;
     border-bottom: 2px solid black;
   }
+
+  @media (max-width: 750px){
+    
+    .featuredImg {
+        width: 100%;
+    }
+    .img-circle{
+    	width: 50%;
+    }
+}
