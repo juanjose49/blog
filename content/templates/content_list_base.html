@@ -5,11 +5,11 @@
 			<div class = "row">
 				<div class = "col-xs-10 col-xs-offset-1">
 					<div class="panel panel-default">
-						<a href = "{{content_post.id}}"><img style = "padding-top: 10px; padding-left: 15px; padding-right: 15px;" class = "featuredImg  img-responsive pull-left"  src = "{{content_post.img.url}}" width = "22%" > </a>			
+						<a href = "{{content_post.id}}"><img style = "padding-top: 10px; padding-left: 15px; padding-right: 15px;" class = "featuredImg  img-responsive pull-left"  src = "{{content_post.img.url}}" width = "23%" > </a>			
 						<div class="panel-body">
 							<h3><a href = "{{content_post.id}}">{{content_post.title}}</a></h3>
 							<h6>{{content_post.date}}</h6>
-							<p>{{content_post.content|truncatechars:250 | striptags}}</p>
+							<p>{{content_post.content|truncatechars:300 | cut:"Motivation:" | safe}}</p>
 							<a href = "{{content_post.id}}" class = "btn btn-{% if content_post.type|stringformat:"s" == "Projects" %}danger{% else %}primary{% endif %} pull-right">View {% if content_post.type|stringformat:"s" == "Projects"%}Project{%else%}{{content_post.type}} Entry{%endif%}</a>
 						</div>
 					</div>
