@@ -1,4 +1,5 @@
 from django.db import models
+from ckeditor.fields import RichTextField
 
 # Create your models here.
 
@@ -12,7 +13,7 @@ class Publication(models.Model):
 	type = models.ForeignKey(PubType, default=None)
 	date = models.DateTimeField()
 	title = models.CharField(max_length=200)
-	content = models.TextField(default='')
+	content = RichTextField()
 	img = models.ImageField(upload_to='img/')
 
 	def __str__(self):

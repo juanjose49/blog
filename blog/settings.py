@@ -36,7 +36,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'content'
+    'content',
+    'ckeditor',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -87,3 +88,5 @@ STATIC_URL = '/static/'
 MEDIA_ROOT = os.path.join(BASE_DIR ,'../media')
 MEDIA_URL = '/media/'
 
+CKEDITOR_UPLOAD_PATH = "uploads/"
+CKEDITOR_JQUERY_URL = "http://code.jquery.com/jquery-1.11.2.min.js"

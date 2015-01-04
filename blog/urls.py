@@ -8,4 +8,5 @@ urlpatterns = patterns('',
     url(r'^$', 'content.views.home_page', name='home'),
     url(r'^content/', include('content.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^ckeditor/', include('ckeditor.urls')),
 ) + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
