@@ -11,12 +11,20 @@ def home_page(request):
 def blog(request):
 	pub_type = PubType.objects.get(type='Blog')
 	content_posts = pub_type.publication_set.all().order_by('-date')
-	return render(request,'blog.html',{'content_posts': content_posts})
+	return render(request,'blog_list.html',{'content_posts' : content_posts})
+
+def blog_entry(request, blog_id):
+	content_post = Publication.objects.get(id=blog_id)
+	return render(request,'blog.html',{'content_post': content_post})
 
 def projects(request):
 	pub_type = PubType.objects.get(type='Projects')
 	content_posts = pub_type.publication_set.all().order_by('-date')
-	return render(request,'projects.html',{'content_posts' : content_posts})
+	return render(request,'projects_list.html',{'content_posts' : content_posts})
+
+def projects_entry(request,projects_id):
+	content_post = Publication.objects.get(id=projects_id)
+	return render(request,'projects.html',{'content_post': content_post})
 
 def about(request):
 	static_content = StaticContent.objects.get(purpose='about_text')
