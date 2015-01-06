@@ -14,6 +14,7 @@ class Publication(models.Model):
 	date = models.DateTimeField()
 	title = models.CharField(max_length=200)
 	content = RichTextField()
+	short_content = models.TextField(default='')
 	img = models.ImageField(upload_to='img/')
 
 	def __str__(self):

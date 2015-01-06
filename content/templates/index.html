@@ -23,7 +23,7 @@
  						 <div class="panel-body">
 							<h3><a href = "content/{{recent_post.type|lower}}/{{recent_post.id}}">{{recent_post.title}}</a></h3>
 							<h6>{{recent_post.date}}</h6>
-							<p>{{recent_post.content|truncatechars:300 | cut:"Motivation:" | safe}}</p>
+							<p>{{recent_post.short_content|truncatechars:300 | safe}}</p>
 							<a href = "content/{{recent_post.type|lower}}/{{recent_post.id}}" class = "btn btn-{% if recent_post.type|stringformat:"s" == "Projects" %}danger{% else %}primary{% endif %} pull-right">View {% if recent_post.type|stringformat:"s" == "Projects"%}Project{%else%}{{recent_post.type}} Entry{%endif%}</a>
 						</div>
 					</div>
