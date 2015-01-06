@@ -16,7 +16,7 @@
 						<div class="panel-body">
 							<h3><a href = "{{content_post.id}}">{{content_post.title}}</a></h3>
 							<h6>{{content_post.date}}</h6>
-							<p>{{content_post.short_content|truncatechars:300 | safe}}</p>
+							<p>{{content_post.short_content|truncatechars:270 | safe}}</p>
 							<a href = "{{content_post.id}}" class = "btn btn-{% if content_post.type|stringformat:"s" == "Projects" %}danger{% else %}primary{% endif %} pull-right">View {% if content_post.type|stringformat:"s" == "Projects"%}Project{%else%}{{content_post.type}} Entry{%endif%}</a>
 						</div>
 					</div>
